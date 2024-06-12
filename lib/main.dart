@@ -56,11 +56,5 @@ which i find most productive
 
 
 
-// issues
-i use linux(arch linux) so i don't have figma application but i am using a web version and i had kinda problem getting
-texts,images and etc 
-so i wrote my own text from google  and used images from internet. 
-sorry for this.
-
 
 */
