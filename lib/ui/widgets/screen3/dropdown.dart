@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomDropDown extends StatelessWidget {
-  const CustomDropDown({super.key, required this.userInput});
+  CustomDropDown({super.key, required this.userInput, this.showIcon = true});
   final String userInput;
+
+  bool showIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,11 @@ class CustomDropDown extends StatelessWidget {
             userInput,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
-          Icon(Icons.keyboard_arrow_down_outlined)
+          showIcon
+              ? Icon(Icons.keyboard_arrow_down_outlined)
+              : SizedBox(
+                  width: 1,
+                )
         ],
       ),
     );

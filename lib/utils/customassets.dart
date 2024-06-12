@@ -18,4 +18,5 @@ class CustomAssets {
   static String officeImage = '${baseImage}office.png';
   static String food = '${baseImage}food.png';
   static String menu = '${baseImage}menu.png';
+  static String icecream = '${baseImage}icecream.png';
 }
