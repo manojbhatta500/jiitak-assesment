@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:jiitak/utils/customassets.dart';
 
 class PackageDetail extends StatelessWidget {
   const PackageDetail({super.key});
@@ -33,8 +35,8 @@ class PackageDetail extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Image.asset(
-                    'assets/health.jpg',
+                  SvgPicture.asset(
+                    CustomAssets.healthpic,
                     width: double.infinity,
                     fit: BoxFit.cover,
                   ),

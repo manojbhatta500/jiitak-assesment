@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:jiitak/utils/customassets.dart';
 
 class FirstAppBar extends StatelessWidget implements PreferredSizeWidget {
   const FirstAppBar({super.key});
@@ -22,31 +25,27 @@ class FirstAppBar extends StatelessWidget implements PreferredSizeWidget {
                       width: appBarWidth * 0.6,
                       height: appBarHeight * 0.055,
                       decoration: BoxDecoration(
-                        color: const Color(0XFFFAFAFA),
+                        color: const Color(0XFFF7F7F7),
                         borderRadius: BorderRadius.circular(15),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            spreadRadius: 1,
-                            blurRadius: 1,
-                            offset: const Offset(0, 2),
-                          ),
-                        ],
                       ),
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: '人生は素晴らしい',
+                          hintText: '北海道, 札幌市',
+                          hintStyle: Theme.of(context).textTheme.bodyLarge,
                           border: OutlineInputBorder(
+                              borderSide: BorderSide.none,
                               borderRadius: BorderRadius.circular(15.0)),
                         ),
                       )),
-                  Icon(
-                    FontAwesomeIcons.list,
-                    color: Colors.black.withOpacity(0.5),
+                  SvgPicture.asset(
+                    CustomAssets.filterIcon,
+                    semanticsLabel: 'filter Logo',
+                    color: Color(0xff303030),
                   ),
-                  const Icon(
-                    FontAwesomeIcons.heart,
-                    color: Colors.red,
+                  SvgPicture.asset(
+                    CustomAssets.heartIcon,
+                    semanticsLabel: 'heart Logo',
+                    color: Color(0xffEE5F40),
                   ),
                 ],
               ),
@@ -57,29 +56,17 @@ class FirstAppBar extends StatelessWidget implements PreferredSizeWidget {
             width: double.infinity,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
+                begin: Alignment.bottomLeft,
+                end: Alignment.topRight,
                 colors: [
-                  Colors.yellow.shade700,
+                  const Color(0xFFFAAA14),
                   const Color(0xFFFFD78D),
-                  const Color(0xFFFFFFFF),
                 ],
               ),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
-                  spreadRadius: 1,
-                  blurRadius: 2,
-                  offset: const Offset(0, 3),
-                ),
-              ],
             ),
-            child: const Center(
-              child: Text(
-                'もっと笑って',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Color(0xff303030)),
-              ),
+            child: Center(
+              child: Text('2022年 5月 26日（木）',
+                  style: Theme.of(context).textTheme.bodyLarge),
             ),
           )
         ],

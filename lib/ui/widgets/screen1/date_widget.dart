@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DateWidget extends StatefulWidget {
   const DateWidget({super.key});
@@ -35,24 +36,20 @@ class _DateWidgetState extends State<DateWidget> {
               ),
               child: Column(
                 children: [
-                  Text(
-                    '日付',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: _selectedDateIndex == index
-                          ? Colors.white
-                          : Colors.black,
-                    ),
-                  ),
-                  Text(
-                    '${index + 1}',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: _selectedDateIndex == index
-                          ? Colors.white
-                          : Colors.black,
-                    ),
-                  ),
+                  Text('金',
+                      style: GoogleFonts.notoSansJp(
+                        color: _selectedDateIndex == index
+                            ? Colors.white
+                            : Colors.black,
+                        fontSize: 16,
+                      )),
+                  Text('${index + 1}',
+                      style: GoogleFonts.notoSansJp(
+                        color: _selectedDateIndex == index
+                            ? Colors.white
+                            : Colors.black,
+                        fontSize: 16,
+                      )),
                 ],
               ),
             ),

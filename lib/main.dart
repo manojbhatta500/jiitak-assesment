@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:jiitak/routes/routes.dart';
 import 'package:jiitak/ui/screens/homepage.dart';
 
@@ -17,6 +18,24 @@ class MyApp extends StatelessWidget {
       getPages: Routes.getPages,
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
+      theme: ThemeData(
+          textTheme: TextTheme(
+        bodyLarge: GoogleFonts.notoSansJp(),
+        bodyMedium: GoogleFonts.notoSansJp(),
+        bodySmall: GoogleFonts.notoSansJp(),
+        labelLarge: GoogleFonts.notoSansJp(),
+        labelMedium: GoogleFonts.notoSansJp(),
+        displayLarge: GoogleFonts.notoSansJp(),
+        displayMedium: GoogleFonts.notoSansJp(),
+        titleSmall: GoogleFonts.notoSansJp(),
+        displaySmall: GoogleFonts.notoSansJp(),
+        headlineLarge: GoogleFonts.notoSansJp(),
+        headlineMedium: GoogleFonts.notoSansJp(),
+        headlineSmall: GoogleFonts.notoSansJp(),
+        labelSmall: GoogleFonts.notoSansJp(),
+        titleLarge: GoogleFonts.notoSansJp(),
+        titleMedium: GoogleFonts.notoSansJp(),
+      )),
     );
   }
 }
@@ -24,8 +43,7 @@ class MyApp extends StatelessWidget {
 // my thought process
  
 /*
-i use a lot of custom widget and create a seperation between my pages 
-and my ui so i have divided them into 2 folders and one is screen and widgets
+
 
 i use mediaquery and  and flexible  and gridview.builder for building 
 
