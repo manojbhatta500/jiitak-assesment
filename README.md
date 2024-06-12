@@ -1,17 +1,18 @@
 # jiitak
 
-A new Flutter project.
 
-## Getting Started
+my thought process explained :
 
-This project is a starting point for a Flutter application.
+i have created ui and  routes diffrent 
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+for ui i have created screen and widgets(component) seperate
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+for responsiveness i am using media query  and  my base for making it responsive 
+is width i am rendering ( giving approx size) to components although it creates a lot of files but it's easier to read code this and change without complexity.
+
+
+let me know if you have any suggestion for me 
+
+
 # jiitak-assesment
