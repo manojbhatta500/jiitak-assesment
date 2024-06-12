@@ -8,6 +8,7 @@ class WhiteContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Flexible(
       child: Container(
         width: double.infinity,
@@ -28,8 +29,9 @@ class WhiteContainer extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            Container(
+              margin: EdgeInsets.symmetric(
+                  vertical: 3, horizontal: width > 600 ? 0.2 * width : 10),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(

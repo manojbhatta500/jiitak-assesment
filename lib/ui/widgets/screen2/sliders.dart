@@ -10,8 +10,8 @@ class Sliders extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-      height: width > 600 ? 140 : 180,
-      width: width > 600 ? 0.5 * width : 0.9 * width,
+      height: width > 600 ? 200 : 180,
+      width: width > 600 ? 0.6 * width : 0.9 * width,
       child: PageView(
         children: [
           Container(
@@ -61,22 +61,34 @@ class IconGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      padding: EdgeInsets.all(10),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4,
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
-      ),
-      itemCount: 16, // Number of items
-      itemBuilder: (context, index) {
-        return SvgPicture.asset(
-          CustomAssets.star,
-          semanticsLabel: 'mini Logo',
-          height: 22,
-          color: Color(0XFFFAA677),
-        );
-      },
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            for (int i = 0; i < 4; i++)
+              SvgPicture.asset(
+                CustomAssets.star,
+                semanticsLabel: 'mini Logo',
+                height: 30,
+                color: Color(0XFFFAA677),
+              )
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            for (int i = 0; i < 4; i++)
+              SvgPicture.asset(
+                CustomAssets.star,
+                semanticsLabel: 'mini Logo',
+                height: 30,
+                color: Color(0XFFFAA677),
+              )
+          ],
+        ),
+      ],
     );
   }
 }

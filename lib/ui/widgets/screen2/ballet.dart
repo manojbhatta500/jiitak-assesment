@@ -6,9 +6,11 @@ class BalletContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.symmetric(vertical: 3, horizontal: 10),
+      margin: EdgeInsets.symmetric(
+          vertical: 3, horizontal: width > 600 ? 0.2 * width : 10),
       padding: EdgeInsets.symmetric(vertical: 3, horizontal: 5),
       decoration: BoxDecoration(
         color: Colors.white,
