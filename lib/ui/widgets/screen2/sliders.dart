@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:jiitak/utils/customassets.dart';
 
 class Sliders extends StatelessWidget {
   const Sliders({super.key});
@@ -63,15 +65,16 @@ class IconGrid extends StatelessWidget {
       padding: EdgeInsets.all(10),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
-        crossAxisSpacing: 5,
-        mainAxisSpacing: 5,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
       ),
       itemCount: 16, // Number of items
       itemBuilder: (context, index) {
-        return Icon(
-          Icons.verified,
-          color: Colors.red,
-          size: 30,
+        return SvgPicture.asset(
+          CustomAssets.star,
+          semanticsLabel: 'mini Logo',
+          height: 22,
+          color: Color(0XFFFAA677),
         );
       },
     );

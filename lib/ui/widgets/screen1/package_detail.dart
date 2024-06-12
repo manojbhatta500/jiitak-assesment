@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:jiitak/utils/customassets.dart';
 
 class PackageDetail extends StatelessWidget {
@@ -12,22 +14,14 @@ class PackageDetail extends StatelessWidget {
 
     return ConstrainedBox(
       constraints: const BoxConstraints(
-        minHeight: 500,
+        minHeight: 600,
       ),
       child: Container(
         width: 300,
-        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0.04 * width),
+        margin: EdgeInsets.symmetric(vertical: 1, horizontal: 0.04 * width),
         decoration: BoxDecoration(
-          color: Colors.black,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.green.withOpacity(0.2),
-              spreadRadius: 1,
-              blurRadius: 1,
-              offset: const Offset(0, 2),
-            ),
-          ],
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
@@ -35,7 +29,7 @@ class PackageDetail extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  SvgPicture.asset(
+                  Image.asset(
                     CustomAssets.healthpic,
                     width: double.infinity,
                     fit: BoxFit.cover,
@@ -47,12 +41,12 @@ class PackageDetail extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 3, horizontal: 6),
                       decoration: const BoxDecoration(
-                          color: Colors.red,
+                          color: Color(0xffFF6262),
                           borderRadius: BorderRadius.only(
                               topRight: Radius.circular(4),
                               bottomRight: Radius.circular(4))),
                       child: const Text(
-                        '気をつけて',
+                        '本日まで',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ),
@@ -63,44 +57,44 @@ class PackageDetail extends StatelessWidget {
                 child: Container(
                   color: Colors.white.withOpacity(0.96),
                   padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                      const EdgeInsets.symmetric(vertical: 2, horizontal: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text(
-                          '私たちは老人の世話をします。急いでください。',
-                          style: TextStyle(
-                            fontSize: 17,
+                      Text('介護有料老人ホームひルパー求人（パート／バイト）',
+                          style: GoogleFonts.notoSansJp(
+                            fontSize: 14,
                             fontWeight: FontWeight.bold,
+                          )
+                          // TextStyle(
+                          //   fontStyle: GoogleFonts.,
+
+                          // ),
                           ),
-                        ),
-                      ),
                       const SizedBox(height: 3),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 5, horizontal: 10),
+                                vertical: 5, horizontal: 4),
                             decoration: BoxDecoration(
-                              color: Colors.black54.withOpacity(0.3),
+                              color: Color(0XFFE8E8E8),
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            child: const Center(
+                            child: Center(
                               child: Text(
-                                '割引価格',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 15),
+                                '介護付き有料老人ホーム',
+                                style: GoogleFonts.notoSansJp(
+                                    color: Color(0XFFFAAA14), fontSize: 12),
                               ),
                             ),
                           ),
-                          const FittedBox(
+                          FittedBox(
                             fit: BoxFit.fitWidth,
                             child: Text(
-                              '6000 ¥',
-                              style: TextStyle(
+                              '¥ 6,000',
+                              style: GoogleFonts.notoSansJp(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -109,30 +103,57 @@ class PackageDetail extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 1),
-                      const FittedBox(
+                      FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
-                          '私たちは老人の世話をします。急いでください。',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
+                          '5月 31日（水）08 : 00 ~ 17 : 00',
+                          style: GoogleFonts.notoSansJp(
+                            fontSize: 14,
                           ),
                         ),
                       ),
                       const SizedBox(height: 1),
-                      const Row(
+                      FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          '北海道札幌市東雲町3丁目916番地17号',
+                          style: GoogleFonts.notoSansJp(
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                      //
+                      const SizedBox(height: 1),
+                      FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          '交通費 300円',
+                          style: GoogleFonts.notoSansJp(
+                            fontSize: 13,
+                          ),
+                        ),
+                      ),
+
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           FittedBox(
                             fit: BoxFit.fitWidth,
                             child: Text(
-                              '私たちは老人の.私たちは老人の.',
-                              style: TextStyle(fontSize: 10),
+                              '住宅型有料老人ホームひまわり倶楽部',
+                              style: GoogleFonts.notoSansJp(
+                                  fontSize: 12, color: Color(0XFF303030)),
                             ),
                           ),
-                          Icon(
-                            FontAwesomeIcons.heart,
-                            color: Colors.red,
+                          // Icon(
+                          //   FontAwesomeIcons.heart,
+                          //   color: Colors.red,
+                          // ),
+                          SvgPicture.asset(
+                            CustomAssets.heartIcon,
+                            height: 20,
+                            semanticsLabel: 'heart Logo',
+                            color: Color(0xffEE5F40),
                           ),
                         ],
                       ),

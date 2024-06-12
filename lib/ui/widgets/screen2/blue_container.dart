@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:jiitak/utils/customassets.dart';
 
 class BlueContainer extends StatelessWidget {
   const BlueContainer({super.key});
@@ -28,21 +31,24 @@ class BlueContainer extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Color(0xff949EFF)),
-                    child: Icon(
-                      Icons.arrow_back_ios_new,
+                        shape: BoxShape.circle, color: Color(0xff949EFF)),
+                    child: SvgPicture.asset(
+                      CustomAssets.backIcon,
+                      semanticsLabel: 'done Logo',
+                      height: 25,
                       color: Colors.white,
-                      weight: 1,
                     ),
                   ),
                 ),
                 Text(
-                  'いらっしゃいませ',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  'スタンプカード詳細',
+                  style:
+                      GoogleFonts.notoSansJp(color: Colors.white, fontSize: 18),
                 ),
-                Icon(
-                  FontAwesomeIcons.circleMinus,
+                SvgPicture.asset(
+                  CustomAssets.minimize,
+                  semanticsLabel: 'mini Logo',
+                  height: 25,
                   color: Colors.white,
                 ),
               ],
@@ -51,15 +57,20 @@ class BlueContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '幸福への道',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  'Mer キッチン',
+                  style:
+                      GoogleFonts.notoSansJp(color: Colors.white, fontSize: 18),
                 ),
                 Text(
-                  '今すぐ参加してください',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  '現在の獲得数 30 個',
+                  style:
+                      GoogleFonts.notoSansJp(color: Colors.white, fontSize: 18),
                 ),
               ],
             ),
+            SizedBox(
+              height: 1,
+            )
           ],
         ),
       ),

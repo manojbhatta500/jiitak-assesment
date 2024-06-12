@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BalletContainer extends StatelessWidget {
   const BalletContainer({super.key});
@@ -26,8 +27,8 @@ class BalletContainer extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: Text(
-              '2021/11/18',
-              style: TextStyle(
+              '2021 / 11 / 18',
+              style: GoogleFonts.notoSansJp(
                 color: Colors.green.withOpacity(0.7),
               ),
             ),
@@ -39,16 +40,16 @@ class BalletContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'ごきげんよう',
-                style: TextStyle(
+                'スタンプを獲得しました。',
+                style: GoogleFonts.notoSansJp(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
               Text(
-                '1 ライブ',
-                style: TextStyle(
+                '1 個',
+                style: GoogleFonts.notoSansJp(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,

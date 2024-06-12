@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:jiitak/ui/widgets/screen2/ballet.dart';
 import 'package:jiitak/ui/widgets/screen2/sliders.dart';
 
@@ -13,7 +14,7 @@ class WhiteContainer extends StatelessWidget {
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30), topRight: Radius.circular(30))),
+                topLeft: Radius.circular(25), topRight: Radius.circular(25))),
         child: Column(
           children: [
             Sliders(),
@@ -21,7 +22,10 @@ class WhiteContainer extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
               child: Align(
                 alignment: Alignment.centerRight,
-                child: Text('1/2がオンです'),
+                child: Text(
+                  '1/2がオンです',
+                  style: GoogleFonts.notoSansJp(),
+                ),
               ),
             ),
             Padding(
@@ -29,8 +33,9 @@ class WhiteContainer extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  '重要なトピックス',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  'スタンプ獲得履歴',
+                  style: GoogleFonts.notoSansJp(
+                      fontWeight: FontWeight.bold, fontSize: 14),
                 ),
               ),
             ),
