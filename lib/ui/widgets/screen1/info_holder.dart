@@ -14,8 +14,8 @@ class InfoHolder extends StatelessWidget {
     return GestureDetector(
       onTap: runner,
       child: Container(
-        width: 0.80 * width,
-        height: 0.15 * height,
+        width: width > 600 ? 0.5 * width : 0.7 * width,
+        height: width > 600 ? 0.1 * height : 0.15 * height,
         margin: const EdgeInsets.symmetric(vertical: 10),
         decoration: ShapeDecoration(
           color: const Color(0xFFFB9C2C),

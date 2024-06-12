@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -34,8 +33,8 @@ class PackageDetail extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Image.network(
-                    'https://media.cnn.com/api/v1/images/stellar/prod/220831132511-japan-kitakyushu-nursing-home-babies.jpg?c=original',
+                  Image.asset(
+                    'assets/health.jpg',
                     width: double.infinity,
                     fit: BoxFit.cover,
                   ),
@@ -43,7 +42,8 @@ class PackageDetail extends StatelessWidget {
                     bottom: 5,
                     left: 1,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 6),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 3, horizontal: 6),
                       decoration: const BoxDecoration(
                           color: Colors.red,
                           borderRadius: BorderRadius.only(
@@ -60,7 +60,8 @@ class PackageDetail extends StatelessWidget {
               Expanded(
                 child: Container(
                   color: Colors.white.withOpacity(0.96),
-                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:jiitak/ui/widgets/date_widget.dart';
-import 'package:jiitak/ui/widgets/firstappbar.dart';
-import 'package:jiitak/ui/widgets/package_detail.dart';
+import 'package:jiitak/ui/widgets/screen1/date_widget.dart';
+import 'package:jiitak/ui/widgets/screen1/firstappbar.dart';
+import 'package:jiitak/ui/widgets/screen1/package_detail.dart';
 
 class Screen1 extends StatelessWidget {
   const Screen1({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return SafeArea(
         child: Scaffold(

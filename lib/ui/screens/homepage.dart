@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jiitak/routes/routes.dart';
-import 'package:jiitak/ui/widgets/info_holder.dart';
+import 'package:jiitak/ui/widgets/screen1/info_holder.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
