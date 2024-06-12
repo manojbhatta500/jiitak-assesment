@@ -8,17 +8,22 @@ class PictureConatainers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Container(
       width: double.infinity,
       margin: EdgeInsets.symmetric(vertical: 10),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment:
+            width > 600 ? CrossAxisAlignment.center : CrossAxisAlignment.start,
         children: [
           Text(
             '店舗外観*（最大3枚まで）',
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           Row(
+            mainAxisAlignment: width > 500
+                ? MainAxisAlignment.spaceAround
+                : MainAxisAlignment.start,
             children: [
               for (int i = 0; i < 3; i++)
                 i < 2
@@ -37,6 +42,9 @@ class PictureConatainers extends StatelessWidget {
             height: 10,
           ),
           Row(
+            mainAxisAlignment: width > 500
+                ? MainAxisAlignment.spaceAround
+                : MainAxisAlignment.start,
             children: [
               for (int i = 0; i < 3; i++)
                 PictureHolder(
@@ -49,6 +57,9 @@ class PictureConatainers extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           Row(
+            mainAxisAlignment: width > 500
+                ? MainAxisAlignment.spaceAround
+                : MainAxisAlignment.start,
             children: [
               for (int i = 0; i < 2; i++)
                 PictureHolder(
@@ -61,6 +72,9 @@ class PictureConatainers extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           Row(
+            mainAxisAlignment: width > 500
+                ? MainAxisAlignment.spaceAround
+                : MainAxisAlignment.start,
             children: [
               for (int i = 0; i < 2; i++)
                 PictureHolder(

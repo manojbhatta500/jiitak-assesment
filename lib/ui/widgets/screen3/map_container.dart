@@ -7,8 +7,9 @@ class MapContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Container(
-      width: 300,
+      width: width > 600 ? 0.3 * width : 300,
       decoration: BoxDecoration(
           border: Border.all(color: Colors.black.withOpacity(0.1)),
           borderRadius: BorderRadius.circular(15)),
