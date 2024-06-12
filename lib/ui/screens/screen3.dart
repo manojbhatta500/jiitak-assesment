@@ -21,8 +21,6 @@ class Screen3 extends StatelessWidget {
                 MapContainer(),
                 PictureConatainers(),
                 TimeContainer()
-
-                //
               ],
             ),
           ),
